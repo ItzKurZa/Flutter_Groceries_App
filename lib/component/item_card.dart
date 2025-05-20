@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hello_world/pages/product_detail.dart';
 
 class ItemCard extends StatelessWidget {
   final String image;
@@ -6,7 +7,13 @@ class ItemCard extends StatelessWidget {
   final String description;
   final String price;
 
-  const ItemCard({super.key, required this.image, required this.name, required this.description, required this.price});
+  const ItemCard({
+    super.key,
+    required this.image,
+    required this.name,
+    required this.description,
+    required this.price,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +27,10 @@ class ItemCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Container(padding: EdgeInsets.all(15),child: Image(image: AssetImage(image))),
+          Container(
+            padding: EdgeInsets.all(15),
+            child: Image(image: AssetImage(image)),
+          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -42,7 +52,12 @@ class ItemCard extends StatelessWidget {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
               ),
               FilledButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ProductDetail()),
+                  );
+                },
                 style: FilledButton.styleFrom(
                   backgroundColor: Color(0xFF53B175),
                   shape: RoundedRectangleBorder(

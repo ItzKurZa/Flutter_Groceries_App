@@ -38,7 +38,7 @@ class _ProductDetailState extends State<ProductDetail> {
                   ),
                   width: fullScreenWidth,
                   height: fullScreenHeight * 0.4,
-                  child: Image(image: AssetImage("assets/images/apple.png")),
+                  child: Image(image: AssetImage("assets/images/exclusive_offers/apple.png")),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 30, left: 10, right: 10),
