@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hello_world/pages/cart.dart';
-import 'package:flutter_hello_world/pages/explore.dart';
-import 'package:flutter_hello_world/pages/favorite.dart';
-import 'package:flutter_hello_world/pages/profile.dart';
-import 'package:flutter_hello_world/pages/shop.dart';
+import 'package:flutter_hello_world/screens/pages/cart.dart';
+import 'package:flutter_hello_world/screens/pages/explore.dart';
+import 'package:flutter_hello_world/screens/pages/favorite.dart';
+import 'package:flutter_hello_world/screens/pages/profile.dart';
+import 'package:flutter_hello_world/screens/pages/shop.dart';
 
 class NavMenu extends StatefulWidget {
   const NavMenu({super.key});

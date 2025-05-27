@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hello_world/pages/product_detail.dart';
+import 'package:flutter_hello_world/screens/pages/product_detail.dart';
 
 class ItemCard extends StatelessWidget {
   final String image;
   final String name;
+  final String details;
   final String description;
   final String price;
 
@@ -11,6 +12,7 @@ class ItemCard extends StatelessWidget {
     super.key,
     required this.image,
     required this.name,
+    required this.details,
     required this.description,
     required this.price,
   });
@@ -39,7 +41,7 @@ class ItemCard extends StatelessWidget {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
               Text(
-                description,
+                details,
                 style: TextStyle(fontSize: 14, color: Color(0xFF7C7C7C)),
               ),
             ],
@@ -55,7 +57,16 @@ class ItemCard extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ProductDetail()),
+                    MaterialPageRoute(
+                      builder:
+                          (context) => ProductDetail(
+                            image,
+                            name,
+                            details,
+                            description,
+                            price,
+                          ),
+                    ),
                   );
                 },
                 style: FilledButton.styleFrom(

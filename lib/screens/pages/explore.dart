@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hello_world/component/category_card.dart';
+import 'package:flutter_hello_world/screens/component/category_card.dart';
 
 class Explore extends StatefulWidget {
   const Explore({super.key});
